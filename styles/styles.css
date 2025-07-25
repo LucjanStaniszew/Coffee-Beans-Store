@@ -15,14 +15,20 @@ header{
     background-color: rgb(192, 167, 121);
     position: sticky;
     top: 0px;
+    z-index: 2;
+    /* Se usa z-index para pisar estilos de bootstrap */
 }
 
 .navbar{
     font-weight: bold;
 }
 
+.navbar-collapse{
+    flex-grow: 0;
+}
+
 .logo{
-    height: 15vh;
+    height: 14vh;
     width: auto;
 }
 
@@ -93,6 +99,7 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 15px;
+    align-items: center;
 }
 
 .main-home h2{
@@ -100,32 +107,13 @@ footer{
     text-align: center;
 }
 
-.cafes{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 30px;
-}
-
-.cafes article{
-    display: flex;
-    flex-direction: column;
-    width: 45vw;
-    align-items: center;
-    margin: 10px;
-    padding: 15px;
-    border: 2px solid black;
-    border-radius: 30px;
-}
-
-.cafes article p{
-    margin-top: 20px;
+.carousel{
+    width: 50vw;
 }
 
 .img-home{
-    height: 40vh;
-    width: auto;
+    width: 50vw;
+    height: auto;
 }
 
 @media (max-width: 425px){
