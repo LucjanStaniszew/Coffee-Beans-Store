@@ -1,0 +1,45 @@
+@use "variables" as v;
+
+.main-store{
+    padding: 15px;
+    @extend %flc;
+    section{
+        width: 95vw;
+        @extend %flr;
+        margin: 10px 0;
+        article{
+            width: 30vw;
+            @extend %flc;
+            justify-content: center;
+            border: 4px solid chocolate;
+            border-radius: 30px;
+            padding: 10px;
+            p{
+                padding: 5px;
+                text-align: center;
+            }
+            h3{
+                font-size: 1.5rem;
+                margin: 10px 0;
+            }
+            img{
+                width: 20vw;
+                height: auto;
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @include v.mobile{
+        section{
+            flex-direction: column;
+            gap: 15px;
+            article{
+                width: auto;
+                img{
+                    width: 60vw;
+                }
+            }
+        }
+    }
+}

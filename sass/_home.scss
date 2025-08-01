@@ -1,0 +1,30 @@
+@use "variables" as v;
+
+.main-home{
+    @extend %flc;
+    padding: 15px;
+    h2{
+        padding: 0 15px;
+        text-align: center;
+    }
+    .carousel{
+        width: 50vw;
+        .img-home{
+            width: 50vw;
+            height: auto;
+        }
+    }
+    @include v.mobile{
+        .carousel{
+            width: 90vw;
+            .carousel-item{
+                margin-left: 5vw;
+                .img-home{
+                    height: 30vh;
+                    width: 80vw;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

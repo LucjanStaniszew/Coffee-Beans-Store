@@ -1,388 +1,301 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
 }
 
-body{
-    background-color: wheat;
+body {
+  background-color: wheat;
 }
 
-/* header */
-
-header{
-    height: 15vh;
-    background-color: rgb(192, 167, 121);
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-    /* Se usa z-index para pisar estilos de bootstrap */
+.main-contacto, .main-us, .main-store section, footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.navbar{
-    font-weight: bold;
+.main-contacto form, .main-contacto section, .main-store, .main-store section article, .main-home {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.navbar-collapse{
-    flex-grow: 0;
+header {
+  height: 15vh;
+  background-color: rgb(192, 167, 121);
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  /* Se usa z-index para pisar estilos de bootstrap */
 }
-
-.logo{
-    height: 14vh;
-    width: auto;
+header .navbar {
+  font-weight: bold;
 }
-
-nav ul li a{
-    border: 2px solid black !important;
-    padding: 10px !important;
-    /* Se usa el important para pisar estilos de bootstrap */
-    border-radius: 15px;
+header .navbar .navbar-collapse {
+  flex-grow: 0;
 }
-nav ul li a:hover{
-    background-color: black;
-    color: rgb(192, 167, 121) !important;
-    /* Se usa el important para pisar estilos de bootstrap */
+header .navbar .logo {
+  height: 14vh;
+  width: auto;
 }
-
-@media (max-width: 425px) {
-    header{
-        height: auto;
-    }
-    h1{
-        display: none;
-    }
-    ul{
-        flex-wrap: wrap;
-        gap: 40px;
-        align-items: center;
-        justify-content: center;
-    }
-    nav ul li a{
-        padding: 10px;
-    }
+header .navbar .nav-link {
+  border: 2px solid black !important;
+  padding: 10px !important;
+  /* Se usa el important para pisar estilos de bootstrap */
+  border-radius: 15px;
 }
-
-/* footer */
-
-footer{
-    height: 15vh;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+header .navbar .nav-link:hover {
+  background-color: black;
+  color: rgb(192, 167, 121) !important;
 }
-
-.rrss{
-    height: 8vh;
-    width: auto;
-    margin: 10px 15px;
-}
-
-.whatsapp{
-    height: 8vh;
-    width: auto;
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-}
-
-@media (max-width: 425px){
-    footer{
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-}
-
-/* home */
-
-.main-home{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    align-items: center;
-}
-
-.main-home h2{
-    padding: 0 15px;
-    text-align: center;
-}
-
-.carousel{
-    width: 50vw;
-}
-
-.img-home{
-    width: 50vw;
+@media (max-width: 430px) {
+  header {
     height: auto;
-}
-
-@media (max-width: 425px){
-    .cafes{
-        flex-direction: column;
-    }
-    .cafes article{
-        margin: 15px 0;
-        padding: 15px 10px;
-        width: 90vw;
-    }
-    .img-home{
-        height: 30vh;
-        width: 80vw;
-        object-fit: contain;
-    }
-    .cafes article p{
-        margin-top: 10px;
-    }
-}
-
-/* Galería */
-
-.main-gal{
-    height: auto;
-    padding: 15px;
-    display: grid;
-    grid-template-areas:
-    "title title title"
-    "cv coffee ch"
-    "cv coffee ch"
-    "cm c3 c3"
-    "cg cg cg"
-    ;
-    gap: 25px;
-    justify-items: center;
-    align-items: center;
-}
-
-.main-gal img{
-    border-radius: 10px;
-}
-
-.main-gal h2{
-    font-size: 2rem;
-    grid-area: title;
-}
-
-.sack-coffee-v{
-    grid-area: cv;
-    height: 40vh;
-    width: auto;
-}
-
-.sack-coffee-h{
-    grid-area: ch;
-    height: 40vh;
-    width: auto;
-}
-
-.coffee-mixer{
-    grid-area: cm;
-    height: 40vh;
-    width: auto;
-}
-
-.coffee-grains-v{
-    grid-area: coffee;
-    height: 40vh;
-    width: auto;
-}
-
-.coffee-grains-h{
-    grid-area: cg;
-    width: 70vw;
-    height: auto;
-}
-
-.coffee-third{
-    grid-area: c3;
-    width: auto;
-    height: 50vh;
-}
-
-@media (max-width: 425px){
-    .main-gal{
-        grid-template-areas:
-        "cv"
-        "ch"
-        "cm"
-        "coffee"
-        "cg"
-        "c3"
-        /* "cv cv" "ch ch" "cm coffee" "cg cg" "c3 c3" */
-        ;
-    }
-    .coffee-third, .coffee-grains-h, .sack-coffee-h{
-        height: auto;
-        width: 90vw;
-    }
-    .coffee-mixer, .coffee-grains-v{
-        height: 35vh;
-        width: auto;
-    }
-    .main-gal h2{
-        display: none;
-    }
-}
-
-/* Tienda */
-
-.main-store{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-store section{
-    width: 95vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.main-store section article{
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid chocolate;
-    border-radius: 30px;
     padding: 10px;
+  }
+  header ul {
+    gap: 20px;
+  }
+  header ul .nav-link {
+    padding: 10px;
+  }
 }
 
-.main-store section article p{
-    padding: 5px;
-    text-align: center;
+footer {
+  height: 15vh;
+  padding: 15px;
+}
+footer .rrss {
+  height: 8vh;
+  width: auto;
+  margin: 10px 15px;
+}
+footer .whatsapp {
+  height: 8vh;
+  width: auto;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 2;
+  /* Se usa z-index para pisar estilos de bootstrap */
+}
+@media (max-width: 430px) {
+  footer footer {
+    gap: 15px;
+  }
 }
 
-.main-store h3{
+.main-home {
+  padding: 15px;
+}
+.main-home h2 {
+  padding: 0 15px;
+  text-align: center;
+}
+.main-home .carousel {
+  width: 50vw;
+}
+.main-home .carousel .img-home {
+  width: 50vw;
+  height: auto;
+}
+@media (max-width: 430px) {
+  .main-home .carousel {
+    width: 90vw;
+  }
+  .main-home .carousel .carousel-item {
+    margin-left: 5vw;
+  }
+  .main-home .carousel .carousel-item .img-home {
+    height: 30vh;
+    width: 80vw;
+    object-fit: contain;
+  }
+}
+
+.main-gal {
+  height: auto;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title title" "cv coffee ch" "cv coffee ch" "cm c3 c3" "cg cg cg";
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+.main-gal img {
+  border-radius: 10px;
+}
+.main-gal h2 {
+  font-size: 2rem;
+  grid-area: title;
+}
+.main-gal .sack-coffee-v {
+  grid-area: cv;
+  height: 40vh;
+  width: auto;
+}
+.main-gal .sack-coffee-h {
+  grid-area: ch;
+  height: 40vh;
+  width: auto;
+}
+.main-gal .coffee-mixer {
+  grid-area: cm;
+  height: 40vh;
+  width: auto;
+}
+.main-gal .coffee-grains-v {
+  grid-area: coffee;
+  height: 40vh;
+  width: auto;
+}
+.main-gal .coffee-grains-h {
+  grid-area: cg;
+  width: 70vw;
+  height: auto;
+}
+.main-gal .coffee-third {
+  grid-area: c3;
+  width: auto;
+  height: 50vh;
+}
+@media (max-width: 430px) {
+  .main-gal {
+    grid-template-areas: "cv" "ch" "cm" "coffee" "cg" "c3";
+  }
+  .main-gal .coffee-third, .main-gal .coffee-grains-h, .main-gal .sack-coffee-h {
+    height: auto;
+    width: 90vw;
+  }
+  .main-gal .coffee-mixer, .main-gal .coffee-grains-v {
+    height: 35vh;
+    width: auto;
+  }
+  .main-gal .main-gal h2 {
+    display: none;
+  }
+}
+
+.main-store {
+  padding: 15px;
+}
+.main-store section {
+  width: 95vw;
+  margin: 10px 0;
+}
+.main-store section article {
+  width: 30vw;
+  justify-content: center;
+  border: 4px solid chocolate;
+  border-radius: 30px;
+  padding: 10px;
+}
+.main-store section article p {
+  padding: 5px;
+  text-align: center;
+}
+.main-store section article h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.main-store section article img {
+  width: 20vw;
+  height: auto;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+@media (max-width: 430px) {
+  .main-store section {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-store section article {
+    width: auto;
+  }
+  .main-store section article img {
+    width: 60vw;
+  }
+}
+
+.main-us {
+  padding: 15px;
+}
+.main-us .baristas {
+  width: 45vw;
+  height: auto;
+}
+.main-us section {
+  width: 45vw;
+}
+.main-us section h2 {
+  margin-bottom: 20px;
+}
+@media (max-width: 430px) {
+  .main-us {
+    flex-direction: column;
+  }
+  .main-us section, .main-us .baristas {
+    width: 90vw;
+  }
+  .main-us .baristas {
+    margin-bottom: 15px;
+  }
+}
+
+.main-contacto form {
+  width: 45vw;
+  padding: 15px;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.main-contacto form input {
+  height: 5vh;
+  width: 20vw;
+}
+.main-contacto form textarea {
+  width: 30vw;
+  height: 15vh;
+}
+.main-contacto section {
+  padding: 15px;
+  width: 45vw;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.main-contacto section iframe {
+  width: 40vw;
+  height: 50vh;
+}
+@media (max-width: 430px) {
+  .main-contacto {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-contacto form, .main-contacto section {
+    width: 90vw;
+  }
+  .main-contacto section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  .main-contacto section iframe {
+    width: 75vw;
+  }
+  .main-contacto form label {
     font-size: 1.5rem;
-    margin: 10px 0;
+  }
+  .main-contacto form input {
+    width: 60vw;
+  }
+  .main-contacto form textarea {
+    height: 20vh;
+    width: 80vw;
+  }
 }
 
-.main-store section img{
-    width: 20vw;
-    height: auto;
-    border-radius: 50px;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 425px) {
-    .main-store section{
-        flex-direction: column;
-        gap: 15px;
-    }
-    .main-store section article{
-        width: auto;
-    }
-    .main-store section img{
-        width: 60vw;
-    }
-}
-
-/* Sobre Nosotros */
-
-.main-us{
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.baristas{
-    width: 45vw;
-    height: auto;
-}
-
-.main-us section{
-    width: 45vw;
-}
-
-.main-us section h2{
-    margin-bottom: 20px;
-}
-
-@media (max-width: 425px){
-    .main-us{
-        flex-direction: column;
-    }
-    .main-us section, .baristas{
-        width: 90vw;
-    }
-    .baristas{
-        margin-bottom: 15px;
-    }
-}
-
-/* Contacto */
-
-.main-contacto{
-    display: flex;
-    justify-content: space-around;
-}
-
-.main-contacto form{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 45vw;
-    align-items: center;
-    border: 2px black solid;
-    border-radius: 15px;
-}
-
-.main-contacto section{
-    padding: 15px;
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px black solid;
-    border-radius: 15px;
-}
-
-input{
-    height: 5vh;
-    width: 20vw;
-}
-
-textarea{
-    width: 30vw;
-    height: 15vh;
-}
-
-iframe{
-    width: 40vw;
-    height: 50vh;
-}
-
-@media (max-width: 425px){
-    .main-contacto{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    .main-contacto form, .main-contacto section{
-        width: 90vw;
-    }
-    .main-contacto h2{
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-    .main-contacto label{
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    input{
-        width: 60vw;
-    }
-    textarea{
-        height: 20vh;
-        width: 80vw;
-    }
-    iframe{
-        width: 75vw;
-    }
-}
+/*# sourceMappingURL=styles.css.map */

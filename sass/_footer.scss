@@ -1,0 +1,26 @@
+@use "variables" as v;
+
+footer{
+    height: 15vh;
+    padding: 15px;
+    @extend %flr;
+    .rrss{
+        height: 8vh;
+        width: auto;
+        margin: 10px 15px;
+    }
+    .whatsapp{
+        height: 8vh;
+        width: auto;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 2;
+        /* Se usa z-index para pisar estilos de bootstrap */
+    }
+    @include v.mobile{
+        footer{
+            gap: 15px;
+        }
+    }
+}

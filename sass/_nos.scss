@@ -1,0 +1,25 @@
+@use "variables" as v;
+
+.main-us{
+    padding: 15px;
+    @extend %flr;
+    .baristas{
+        width: 45vw;
+        height: auto;
+    }
+    section{
+        width: 45vw;
+        h2{
+            margin-bottom: 20px;
+        }
+    }
+    @include v.mobile{
+        flex-direction: column;
+        section, .baristas{
+            width: 90vw;
+        }
+        .baristas{
+            margin-bottom: 15px;
+        }
+    }
+}

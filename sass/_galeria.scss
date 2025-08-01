@@ -1,0 +1,75 @@
+@use "variables" as v;
+
+.main-gal{
+    height: auto;
+    padding: 15px;
+    display: grid;
+    grid-template-areas:
+    "title title title"
+    "cv coffee ch"
+    "cv coffee ch"
+    "cm c3 c3"
+    "cg cg cg"
+    ;
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+    img{
+        border-radius: 10px;
+    }
+    h2{
+        font-size: 2rem;
+        grid-area: title;
+    }
+    .sack-coffee-v{
+    grid-area: cv;
+    height: 40vh;
+    width: auto;
+    }
+    .sack-coffee-h{
+        grid-area: ch;
+        height: 40vh;
+        width: auto;
+    }
+    .coffee-mixer{
+    grid-area: cm;
+    height: 40vh;
+    width: auto;
+    }
+    .coffee-grains-v{
+        grid-area: coffee;
+        height: 40vh;
+        width: auto;
+    }
+    .coffee-grains-h{
+        grid-area: cg;
+        width: 70vw;
+        height: auto;
+    }
+    .coffee-third{
+        grid-area: c3;
+        width: auto;
+        height: 50vh;
+    }
+    @include v.mobile{
+        grid-template-areas:
+        "cv"
+        "ch"
+        "cm"
+        "coffee"
+        "cg"
+        "c3"
+        ;
+        .coffee-third, .coffee-grains-h, .sack-coffee-h{
+        height: auto;
+        width: 90vw;
+        }
+        .coffee-mixer, .coffee-grains-v{
+            height: 35vh;
+            width: auto;
+        }
+        .main-gal h2{
+            display: none;
+        }
+    }
+}

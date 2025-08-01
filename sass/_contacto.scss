@@ -1,0 +1,60 @@
+@use "variables" as v;
+
+.main-contacto{
+    @extend %flr;
+    form{
+        width: 45vw;
+        padding: 15px;
+        @extend %flc;
+        gap: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        input{
+            height: 5vh;
+            width: 20vw;
+        }
+        textarea{
+            width: 30vw;
+            height: 15vh;
+        }
+    }
+    section{
+        padding: 15px;
+        width: 45vw;
+        @extend %flc;
+        border: 2px solid black;
+        border-radius: 15px;
+        iframe{
+            width: 40vw;
+            height: 50vh;
+        }
+    }
+    @include v.mobile{
+        flex-direction: column;
+        gap: 20px;
+        form, section{
+            width: 90vw;
+        }
+        section{
+            h2{
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            iframe{
+                width: 75vw;
+            }
+        }
+        form{
+            label{
+                font-size: 1.5rem;
+            }
+            input{
+                width: 60vw;
+            }
+            textarea{
+                height: 20vh;
+                width: 80vw;
+            }
+        }
+    }
+}

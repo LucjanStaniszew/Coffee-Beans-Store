@@ -1,0 +1,40 @@
+@use "variables" as v;
+
+header{
+    height: 15vh;
+    background-color: v.$fondoHeader;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    /* Se usa z-index para pisar estilos de bootstrap */
+    .navbar{
+        font-weight: bold;
+        .navbar-collapse{
+            flex-grow: 0;
+        }
+        .logo{
+            height: 14vh;
+            width: auto;
+        }
+        .nav-link{
+            border: 2px solid black !important;
+            padding: 10px !important;
+            /* Se usa el important para pisar estilos de bootstrap */
+            border-radius: 15px;
+            &:hover{
+                background-color: black;
+                color: v.$fondoHeader !important;
+            } 
+        }
+    }
+    @include v.mobile{
+        height: auto;
+        padding: 10px;
+        ul{
+            gap: 20px;
+            .nav-link{
+                padding: 10px;
+            }
+        }
+    }
+}
