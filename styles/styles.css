@@ -24,6 +24,33 @@ body {
   align-items: center;
 }
 
+@keyframes scaleUp {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
+  }
+}
+.main-store section article img:hover, .main-gal img:hover {
+  animation: scaleUp 1s forwards ease-in-out;
+}
+
+@keyframes whatsApp {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+footer .whatsapp {
+  animation: whatsApp 0.5s infinite ease-in-out;
+}
+
 header {
   height: 15vh;
   background-color: rgb(192, 167, 121);

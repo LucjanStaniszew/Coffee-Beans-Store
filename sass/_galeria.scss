@@ -16,6 +16,9 @@
     align-items: center;
     img{
         border-radius: 10px;
+        &:hover{
+            @extend %scaleUp;
+        }
     }
     h2{
         font-size: 2rem;

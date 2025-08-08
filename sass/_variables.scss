@@ -33,3 +33,37 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+
+// Animación
+
+@keyframes scaleUp {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.2;
+    }
+}
+
+// Placeholder para llamar a la animación más tarde cómo @extend
+%scaleUp{
+    animation: scaleUp 1s forwards ease-in-out;
+}
+
+// Animacion para WhatsApp
+
+@keyframes whatsApp {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+%mover{
+    animation: whatsApp 0.5s infinite ease-in-out;
+}

@@ -17,6 +17,7 @@ footer{
         right: 50px;
         z-index: 2;
         /* Se usa z-index para pisar estilos de bootstrap */
+        @extend %mover;
     }
     @include v.mobile{
         footer{
