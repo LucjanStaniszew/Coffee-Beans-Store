@@ -56,6 +56,7 @@
     }
     @include v.mobile{
         grid-template-areas:
+        "title"
         "cv"
         "ch"
         "cm"

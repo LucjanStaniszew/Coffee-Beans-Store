@@ -84,6 +84,9 @@ header .navbar .nav-link:hover {
     height: auto;
     padding: 10px;
   }
+  header h1 {
+    display: none;
+  }
   header ul {
     gap: 20px;
   }
@@ -192,7 +195,7 @@ footer .whatsapp {
 }
 @media (max-width: 430px) {
   .main-gal {
-    grid-template-areas: "cv" "ch" "cm" "coffee" "cg" "c3";
+    grid-template-areas: "title" "cv" "ch" "cm" "coffee" "cg" "c3";
   }
   .main-gal .coffee-third, .main-gal .coffee-grains-h, .main-gal .sack-coffee-h {
     height: auto;

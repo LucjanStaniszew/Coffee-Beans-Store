@@ -28,6 +28,9 @@ header{
         }
     }
     @include v.mobile{
+        h1{
+            display: none;
+        }
         height: auto;
         padding: 10px;
         ul{
